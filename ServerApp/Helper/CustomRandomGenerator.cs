@@ -23,10 +23,12 @@ namespace ServerApp.Helper
             intInst = IntRandomNumber.Instance();
             size = model.inputSize;
             commandModel = model;
-            //
-            doubleInst.GenerateRandomNumber(model.inputSize);
-            intInst.GenerateRandomNumber(model.inputSize);
-            alphInst.GenerateRandomNumber(model.inputSize);
+            
+            var range = model.inputSize / 16;
+
+            doubleInst.GenerateRandomNumber(range);
+            intInst.GenerateRandomNumber(range);
+            alphInst.GenerateRandomNumber(range);
         }
 
         public void StartGenerate()
