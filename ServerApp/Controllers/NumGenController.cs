@@ -127,9 +127,9 @@ namespace ServerApp.Controllers
                     }
 
                     model.totalNumbers = totalNumbers;
-                    model.totalInt = ((totalInt * 100 )/ totalNumbers) ;
-                    model.totalDouble = ((totalDouble * 100) / totalNumbers);
-                    model.totalAlph = ((totalAlph * 100) / totalNumbers);
+                    model.totalInt = (Convert.ToDouble( (totalInt * 100 ))/ totalNumbers) ;
+                    model.totalDouble = (Convert.ToDouble( (totalDouble * 100)) / totalNumbers);
+                    model.totalAlph = (Convert.ToDouble( (totalAlph * 100)) / totalNumbers);
                 }
                 return Ok(model);
             }

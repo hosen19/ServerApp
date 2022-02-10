@@ -9,6 +9,5 @@ namespace ServerApp.Helper
     public interface IRandomNumberContext
     {
         void GenerateRandomNumber(int range);
-
     }
 }

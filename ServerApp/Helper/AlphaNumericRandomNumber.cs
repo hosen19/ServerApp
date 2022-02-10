@@ -58,21 +58,29 @@ namespace ServerApp.Helper
 
                 result.Append(chars[idx]);
             }
-            if (!Char.IsWhiteSpace(result[0]) || !Char.IsWhiteSpace(result[(size - 1) % size]))
+            //if (!Char.IsWhiteSpace(result[0]) || !Char.IsWhiteSpace(result[(size - 1) % size])) // This condition is used to check the first character.
+            if (!Char.IsWhiteSpace(result[0]) || !Char.IsWhiteSpace(result[(size - 1)]))
             {
                 range = random.Next(1, 9);
                 var mod = range % 2;
                 for(int index = 0; index <= range; index ++)
                 {
+                    if((index%2) == 0)
+                        result.Append(" ");  // At Last
+                    else
+                        result.Insert(0, " "); // At First
+                    /*
                     if (mod == 0)
                         result.Append(" ");
                     else
                         result.Insert(0," ");
+                    */
                 }
             }
 
             return result.ToString();
         }
       
+
     }
 }

@@ -12,14 +12,19 @@ namespace ServerApp.Models
         public bool isDouble { get; set; }
         public Int32 inputSize { get; set; }
         public Int32 cType { get; set; }
+
+        public Int32 NumericPercentage { get; set; }
+        public Int32 AlphaPercentage { get; set; }
+        public Int32 DoublePercentage { get; set; }
+
     }
 
     public class ReportModel
     {
         public int totalNumbers { get; set; }
-        public int totalInt { get; set; }
-        public int totalDouble { get; set; }
-        public int totalAlph { get; set; }
+        public double totalInt { get; set; }
+        public double totalDouble { get; set; }
+        public double totalAlph { get; set; }
         public List<string> list { get; set; }
     }
 
